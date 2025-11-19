@@ -29,10 +29,9 @@ const ContactSection = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Location</h3>
                       <p className="text-muted-foreground">
-                        131, MBN Arcade 2nd floor,10th Main, 8th Cross Rd
+                        131, 2nd floor, MBN Arcade, 8th Main Rd, ITI Layout Main Rd
                         <br />
-
-                        ITI Layout,Bengaluru, Karnataka 560068
+                        ITI Layout, 7th Sector, Bengaluru, Karnataka 560102
                       </p>
                     </div>
                   </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -65,25 +65,31 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61583356674456&ref=pl_edit_ig_profile_ac"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-salon"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/styrasalon/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-salon"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://wa.me/6364111745"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-salon"
-                  aria-label="Twitter"
+                  aria-label="WhatsApp"
                 >
-                  <Twitter className="w-5 h-5" />
+                  <MessageCircle className="w-5 h-5" />
                 </a>
               </div>
             </div>
