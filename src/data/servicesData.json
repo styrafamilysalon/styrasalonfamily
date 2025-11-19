@@ -1,0 +1,52 @@
+{
+  "male": {
+    "Combos": {
+      "sub_services": [
+        { "name": "Hair Cut & Wash + Deep Conditioning + Beard Styling + Head Massage", "mrp": 800, "offer": 499 },
+        { "name": "Hair Cut & Wash + Deep Conditioning + Beard Styling + Head Massage + Hair Color (or) Hair Spa", "mrp": 1400, "offer": 1099 },
+        { "name": "Hair Cut & Wash + Deep Conditioning + Beard Styling + Head Massage + Clean-up + De-tan F&N", "mrp": 1500, "offer": 1199 },
+        { "name": "Hair Cut & Wash + Deep Conditioning + Beard Styling + Hair Color (or) Hair Spa + Fruit Facial", "mrp": 2300, "offer": 1599 },
+        { "name": "Head Massage + Pedicure + Manicure + De-tan F&N", "mrp": 1700, "offer": 1299 },
+        { "name": "Hair Cut & Wash + Deep Conditioning + Beard Styling + De-tan F&N + Advanced Whitening Facial", "mrp": 3500, "offer": 2900 },
+        { "name": "Head Massage + Foot Massage + De-tan F&N", "mrp": 1600, "offer": 1199 }
+        
+      ]
+    }
+  },
+  "female": {
+    "Combos": {
+      "sub_services": [
+        { "name": "Threading + Hair Cut & Wash + Deep Conditioning + Hair Spa", "mrp": 2200, "offer": 1600 },
+        { "name": "Threading + Hair Cut & Wash + Deep Conditioning (or) Full Wax + Hair Spa (or) Root Touchup", "mrp": 2500, "offer": 1899 },
+        { "name": "Threading + Rica Waxing (Full arm, Underarm & Full legs) + Clean-up + De-tan", "mrp": 3100, "offer": 2499 },
+        { "name": "Head Massage + De-tan + Basic Pedicure & Manicure", "mrp": 2900, "offer": 2199 },
+        { "name": "Threading + Premium Facial + Premium Pedicure & Manicure + Hair Spa + Full Wax", "mrp": 8000, "offer": 4499 }
+      ]
+    }
+  },
+  "descriptions": {
+    "Hair Cut & Wash": "Latest trending hair cutting styles with professional hair wash using quality shampoo for fresh, salon-perfect look.",
+    "Deep Conditioning": "Advanced hair conditioning treatment to repair dry, damaged hair and restore natural shine and softness.",
+    "Beard Styling": "Modern beard trimming, shaping and grooming by expert barbers for smart, dapper gentleman look.",
+    "Head Massage": "Relaxing champi (head massage) with herbal oils for stress relief, better hair growth and cooling effect.",
+    "Hair Color (or) Hair Spa": "Choose trendy hair colour transformation or deep nourishing spa treatment for silky, bouncy hair.",
+    "Clean-up": "Instant glow facial clean-up for fresh, fair and radiant complexion perfect for parties and events.",
+    "De-tan F&N": "Remove sun tan from face and neck for fairer, brighter skin tone and even complexion.",
+    "Fruit Facial": "Natural fruit facial with vitamins for glowing, fair skin and youthful appearance.",
+    "Pedicure": "Professional foot care with scrubbing, massage, nail paint and moisturizing for soft, beautiful feet.",
+    "Manicure": "Complete hand care with nail cutting, filing, cuticle care, massage and nail polish for elegant hands.",
+    "Foot Massage": "Traditional foot massage (paad maalish) for relaxation, pain relief and better blood circulation.",
+    "Threading": "Expert eyebrow threading and upper lip threading for perfect brow shape and smooth, hair-free face.",
+    "Rica Waxing (Full arm, Underarm & Full legs)": "Premium Rica wax for full arms, underarms and legs - painless, smooth skin for 4-6 weeks.",
+    "De-tan": "Powerful de-tan treatment to remove sun damage, pigmentation and restore fair, even skin tone.",
+    "Basic Pedicure & Manicure": "Regular pedi-mani combo for clean, groomed nails and soft hands and feet.",
+    "Premium Facial": "Luxury salon facial with deep cleansing, brightening, anti-aging for fair, glowing and younger-looking skin.",
+    "Hair Spa": "Complete hair spa treatment with smoothening, conditioning and shine for silky, salon-finish hair.",
+    "Full Wax": "Full body waxing service for completely smooth, hair-free skin lasting weeks - arms, legs, back.",
+    "Root Touchup": "Quick root colour touch-up to cover white/grey hair and maintain your hair colour perfectly.",
+    "Deep Conditioning (or) Full Wax": "Pick deep conditioning for smooth, shiny hair or full body wax for clean, hair-free glowing skin.",
+    "Hair Spa (or) Root Touchup": "Choose nourishing hair spa for damaged hair or root colour service to cover grey hair regrowth.",
+    "Advanced Whitening Facial": "Premium fairness facial with skin brightening actives for fair, radiant and glowing complexion.",
+    "Premium Pedicure & Manicure": "Deluxe pedi-mani package with spa massage, scrub, nail art and premium finish for party-ready look."
+  }
+}

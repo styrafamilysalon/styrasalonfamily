@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 17% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 17% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 17% 15%;
+
+    --primary: 164 100% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 17% 95%;
+    --secondary-foreground: 210 17% 15%;
+
+    --muted: 210 17% 95%;
+    --muted-foreground: 210 10% 45%;
+
+    --accent: 12 100% 56%;
+    --accent-foreground: 210 17% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 17% 90%;
+    --input: 210 17% 90%;
+    --ring: 164 100% 21%;
+
+    --radius: 0.75rem;
+
+    /* Custom salon colors */
+    --salon-teal: 185 75% 28%;
+    --salon-teal-light: 185 65% 85%;
+    --salon-gold: 40 95% 55%;
+    --salon-gold-light: 40 95% 90%;
+    --salon-male: 210 85% 45%;
+    --salon-male-light: 210 85% 95%;
+    --salon-female: 340 75% 55%;
+    --salon-female-light: 340 75% 95%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(164 100% 21%) 0%, hsl(164 60% 28%) 60%, hsl(12 100% 56% / 0.35) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 17% 98%) 100%);
+    --gradient-male: linear-gradient(135deg, hsl(210 85% 98%) 0%, hsl(210 85% 95%) 100%);
+    --gradient-female: linear-gradient(135deg, hsl(340 75% 98%) 0%, hsl(340 75% 95%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(185 75% 28% / 0.08);
+    --shadow-md: 0 4px 16px hsl(185 75% 28% / 0.12);
+    --shadow-lg: 0 8px 32px hsl(185 75% 28% / 0.16);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 210 17% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 17% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 17% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 164 70% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 17% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 210 17% 18%;
+    --muted-foreground: 210 10% 65%;
+
+    --accent: 12 100% 60%;
+    --accent-foreground: 210 17% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 17% 20%;
+    --input: 210 17% 20%;
+    --ring: 164 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-male {
+    background: var(--gradient-male);
+  }
+
+  .gradient-female {
+    background: var(--gradient-female);
+  }
+
+  .shadow-salon {
+    box-shadow: var(--shadow-md);
+  }
+
+  .transition-salon {
+    transition: var(--transition-smooth);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Logo animation */
+  @keyframes scissorSnip {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+  }
+
+  /* Text glow animation */
+  @keyframes textGlow {
+    0%, 100% { 
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 
+                   0 0 40px rgba(255, 255, 255, 0.4),
+                   0 0 60px rgba(255, 255, 255, 0.2);
+    }
+    50% { 
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 
+                   0 0 50px rgba(255, 255, 255, 0.6),
+                   0 0 70px rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  .logo-animation {
+    animation: scissorSnip 4s ease-in-out infinite;
+  }
+
+  .text-glow-animation {
+    animation: textGlow 2s ease-in-out infinite;
+  }
+
+  /* Text stroke effect for visibility */
+  .text-stroke-white {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8);
+    text-stroke: 1.5px rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.05em;
+  }
+
+  .text-stroke-thin {
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.5);
+    text-stroke: 0.5px rgba(255, 255, 255, 0.5);
+  }
+}
+
