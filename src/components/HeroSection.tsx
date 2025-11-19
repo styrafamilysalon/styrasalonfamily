@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import salonImages from "@/data/salonImages.json";
@@ -34,11 +35,12 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img
+            <Image
               src={image.src}
               alt={image.alt}
-              className="w-full h-full object-cover"
-              loading={index === 0 ? "eager" : "lazy"}
+              fill
+              className="object-cover"
+              priority={index === 0}
             />
             {/* Dark overlay for text readability */}
             <div className="absolute inset-0 bg-black/40" />

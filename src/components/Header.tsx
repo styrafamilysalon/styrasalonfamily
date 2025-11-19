@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Scissors } from "lucide-react";
 
@@ -69,10 +70,13 @@ const Header = ({ onBookingClick }: HeaderProps) => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             {/* Logo Image */}
-            <img 
+            <Image 
               src="/logo.png" 
               alt="Styra Salon Logo" 
+              width={48}
+              height={48}
               className="w-12 h-12 object-contain"
+              unoptimized
             />
             
             {/* Simple bold text */}

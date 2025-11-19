@@ -1,3 +1,4 @@
+import Image from "next/image";
 import images from "@/data/galleryImages.json";
 
 const HomeGallery = () => {
@@ -8,14 +9,13 @@ const HomeGallery = () => {
           {images.map((img, idx) => (
             <figure
               key={idx}
-              className="overflow-hidden rounded-xl shadow-salon hover:shadow-lg transition-salon hover-scale"
+              className="overflow-hidden rounded-xl shadow-salon hover:shadow-lg transition-salon hover-scale relative h-40 md:h-56 lg:h-64"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={img.src}
                 alt={img.alt}
-                loading="lazy"
-                className="w-full h-40 md:h-56 lg:h-64 object-cover transform transition-transform duration-500 hover:scale-105"
+                fill
+                className="object-cover transform transition-transform duration-500 hover:scale-105"
               />
             </figure>
           ))}
