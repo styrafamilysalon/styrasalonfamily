@@ -47,7 +47,7 @@ const AboutSection = ({ onBookingClick }: AboutSectionProps) => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Why Choose <span className="text-primary">Styra Salon</span>
             </h2>
-            <div className="w-24 h-1 bg-accent mx-auto rounded-full" />
+            <div className="w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: 'hsl(33, 94%, 59%)' }} />
           </div>
 
           {/* Short Description */}
@@ -168,7 +168,13 @@ const AboutSection = ({ onBookingClick }: AboutSectionProps) => {
             </div>
           </div>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <Button onClick={() => { setIsModalOpen(false); onBookingClick?.(); }} className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button 
+              onClick={() => { setIsModalOpen(false); onBookingClick?.(); }} 
+              className="text-white"
+              style={{ backgroundColor: 'hsl(33, 94%, 59%)' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 50%)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 59%)'}
+            >
               Contact Us
             </Button>
             <Button variant="outline" onClick={() => { setIsModalOpen(false); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); }}>

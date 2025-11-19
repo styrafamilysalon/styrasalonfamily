@@ -1,6 +1,7 @@
 "use client";
 
-import { Facebook, Instagram, MessageCircle } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 const Footer = () => {
   return (
@@ -11,7 +12,9 @@ const Footer = () => {
             {/* Brand */}
             <div>
               <h3 className="text-2xl font-bold mb-4">
-                Styra <span className="text-accent">Salon</span>
+                <span style={{ color: 'hsl(33, 94%, 59%)' }}>Styra</span>
+                {" "}
+                <span className="text-white">Salon</span>
               </h3>
               <p className="text-primary-foreground/80">
                 Best unisex family salon in Bengaluru offering professional hair, beauty, spa and grooming services for men, women & kids at affordable prices.
@@ -68,7 +71,15 @@ const Footer = () => {
                   href="https://www.facebook.com/profile.php?id=61583356674456&ref=pl_edit_ig_profile_ac"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-salon"
+                  className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center transition-salon"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 59%)';
+                    e.currentTarget.style.color = 'white';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '';
+                    e.currentTarget.style.color = '';
+                  }}
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5" />
@@ -77,7 +88,15 @@ const Footer = () => {
                   href="https://www.instagram.com/styrasalon/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-salon"
+                  className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center transition-salon"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 59%)';
+                    e.currentTarget.style.color = 'white';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '';
+                    e.currentTarget.style.color = '';
+                  }}
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
@@ -86,10 +105,18 @@ const Footer = () => {
                   href="https://wa.me/6364111745"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-salon"
+                  className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center transition-salon"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 59%)';
+                    e.currentTarget.style.color = 'white';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '';
+                    e.currentTarget.style.color = '';
+                  }}
                   aria-label="WhatsApp"
                 >
-                  <MessageCircle className="w-5 h-5" />
+                  <WhatsAppIcon className="w-5 h-5" />
                 </a>
               </div>
             </div>

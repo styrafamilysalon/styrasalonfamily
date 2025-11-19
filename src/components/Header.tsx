@@ -70,16 +70,16 @@ const Header = ({ onBookingClick }: HeaderProps) => {
           <div className="flex items-center gap-2">
             {/* Logo Image */}
             <img 
-              src="/logo.svg" 
+              src="/logo.png" 
               alt="Styra Salon Logo" 
               className="w-12 h-12 object-contain"
             />
             
             {/* Simple bold text */}
             <h1 className="text-2xl font-bold">
-              <span className="text-primary">Styra</span>
+              <span style={{ color: 'hsl(33, 94%, 59%)' }}>Styra</span>
               {" "}
-              <span className="text-accent">Salon</span>
+              <span className="text-primary">Salon</span>
             </h1>
           </div>
 
@@ -104,7 +104,10 @@ const Header = ({ onBookingClick }: HeaderProps) => {
           <div className="hidden md:block">
             <Button
               onClick={onBookingClick}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-md hover:shadow-lg transition-salon"
+              className="font-semibold shadow-md hover:shadow-lg transition-salon"
+              style={{ backgroundColor: 'hsl(33, 94%, 59%)', color: 'white' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 50%)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 59%)'}
             >
               Book Your Slot
             </Button>
@@ -146,7 +149,10 @@ const Header = ({ onBookingClick }: HeaderProps) => {
                   onBookingClick();
                   setIsMobileMenuOpen(false);
                 }}
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full"
+                className="font-semibold w-full"
+                style={{ backgroundColor: 'hsl(33, 94%, 59%)', color: 'white' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 50%)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 59%)'}
               >
                 Book Your Slot
               </Button>

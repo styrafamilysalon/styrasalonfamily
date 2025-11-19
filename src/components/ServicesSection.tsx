@@ -69,7 +69,7 @@ const ServicesSection = ({ onBook }: ServicesSectionProps) => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Salon <span className="text-primary">Combo Packages</span>
             </h2>
-            <div className="w-24 h-1 bg-accent mx-auto rounded-full mb-4" />
+            <div className="w-24 h-1 mx-auto rounded-full mb-4" style={{ backgroundColor: 'hsl(33, 94%, 59%)' }} />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Best value salon combo offers for complete makeover | Hair, beauty, spa & grooming packages at special prices
             </p>
@@ -104,7 +104,7 @@ const ServicesSection = ({ onBook }: ServicesSectionProps) => {
                     <CardHeader>
                       <div className="flex items-start justify-between mb-2">
                         <Sparkles className="w-5 h-5 text-salon-male flex-shrink-0 mt-1" />
-                        <Badge className="bg-accent text-accent-foreground">
+                        <Badge className="text-white" style={{ backgroundColor: 'hsl(33, 94%, 59%)' }}>
                         Introductory Offer
                         </Badge>
                       </div>
@@ -168,7 +168,7 @@ const ServicesSection = ({ onBook }: ServicesSectionProps) => {
                     <CardHeader>
                       <div className="flex items-start justify-between mb-2">
                         <Sparkles className="w-5 h-5 text-salon-female flex-shrink-0 mt-1" />
-                        <Badge className="bg-accent text-accent-foreground">
+                        <Badge className="text-white" style={{ backgroundColor: 'hsl(33, 94%, 59%)' }}>
                           Introductory Offer
                         </Badge>
                       </div>
@@ -244,7 +244,7 @@ const ServicesSection = ({ onBook }: ServicesSectionProps) => {
                   <span className="text-lg text-muted-foreground line-through">
                     ₹{selectedService.mrp}
                   </span>
-                  <Badge className="bg-accent text-accent-foreground">
+                  <Badge className="text-white" style={{ backgroundColor: 'hsl(33, 94%, 59%)' }}>
                     Save ₹{selectedService.mrp - selectedService.offer}
                   </Badge>
                 </div>
@@ -256,7 +256,7 @@ const ServicesSection = ({ onBook }: ServicesSectionProps) => {
                   {selectedService.name.split(" + ").map((item, index) => (
                     <li key={index} className="flex flex-col">
                       <div className="flex items-start">
-                        <span className="text-accent mr-2 mt-1">✓</span>
+                        <span className="mr-2 mt-1" style={{ color: 'hsl(33, 94%, 59%)' }}>✓</span>
                         <div className="flex-1">
                           <span className="font-medium text-foreground">{item}</span>
                           {(servicesData as any).descriptions?.[item] && (
@@ -278,7 +278,10 @@ const ServicesSection = ({ onBook }: ServicesSectionProps) => {
               </div>
 
               <Button
-                className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                className="w-full text-white"
+                style={{ backgroundColor: 'hsl(33, 94%, 59%)' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 50%)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 59%)'}
                 onClick={() => {
                   if (selectedService) {
                     const bookingData = { 

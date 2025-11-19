@@ -52,7 +52,7 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
             Best Unisex Salon in Bengaluru
             <br />
-            <span className="text-accent">Professional Hair, Beauty & Spa</span>
+            <span style={{ color: 'hsl(33, 94%, 59%)' }}>Professional Hair, Beauty & Spa</span>
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 max-w-2xl mx-auto drop-shadow-lg">
             Premium salon services for men, women & kids | Expert haircut, facial, spa, waxing, threading & bridal makeup
@@ -61,7 +61,10 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
             <Button
               size="lg"
               onClick={onBookingClick}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-salon group"
+              className="font-semibold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-salon group"
+              style={{ backgroundColor: 'hsl(33, 94%, 59%)', color: 'white' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 50%)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 59%)'}
             >
               Get Appointment Now
               <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-salon" />
@@ -89,9 +92,10 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
             onClick={() => setCurrentImageIndex(index)}
             className={`transition-all duration-300 rounded-full ${
               index === currentImageIndex
-                ? "w-8 h-2 bg-accent"
+                ? "w-8 h-2"
                 : "w-2 h-2 bg-white/50 hover:bg-white/80"
             }`}
+            style={index === currentImageIndex ? { backgroundColor: 'hsl(33, 94%, 59%)' } : {}}
             aria-label={`Go to image ${index + 1}`}
           />
         ))}

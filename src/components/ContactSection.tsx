@@ -11,7 +11,7 @@ const ContactSection = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Visit Our <span className="text-primary">Salon</span>
             </h2>
-            <div className="w-24 h-1 bg-accent mx-auto rounded-full mb-4" />
+            <div className="w-24 h-1 mx-auto rounded-full mb-4" style={{ backgroundColor: 'hsl(33, 94%, 59%)' }} />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Book your appointment today | Walk-ins welcome | Call now for best salon services in Bengaluru
             </p>

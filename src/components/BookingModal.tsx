@@ -365,7 +365,10 @@ const BookingModal = ({ isOpen, onClose, initialGender, initialService }: Bookin
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-6 text-lg"
+            className="w-full text-white font-semibold py-6 text-lg"
+            style={{ backgroundColor: 'hsl(33, 94%, 59%)' }}
+            onMouseEnter={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 50%)')}
+            onMouseLeave={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = 'hsl(33, 94%, 59%)')}
             disabled={isSubmitting}
           >
             {isSubmitting ? "Booking..." : "Confirm Booking"}

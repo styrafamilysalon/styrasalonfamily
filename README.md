@@ -113,7 +113,7 @@ styra-salon-sparkle-main/
 │       └── utils.ts        # Helper utilities (cn, etc.)
 │
 ├── public/                 # Static assets
-│   ├── logo.svg           # Salon logo
+│   ├── logo.png           # Salon logo
 │   ├── favicon.ico        # Website favicon
 │   └── salon-*.jpg        # Salon photos
 │
