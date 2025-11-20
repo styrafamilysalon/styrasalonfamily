@@ -38,9 +38,13 @@ export default function Home() {
             "alternateName": "Styra Family Salon",
             "description": "Leading unisex family salon in Bengaluru offering professional haircut, hair spa, facial, threading, waxing, pedicure, manicure, beard styling, bridal makeup and complete grooming services.",
             "url": "https://styrasalon.in",
+            "logo": "https://styrasalon.in/logo.png",
             "telephone": "+91-6364111745",
             "priceRange": "₹₹",
-            "image": "https://styrasalon.in/salon-1.jpg",
+            "image": [
+              "https://styrasalon.in/logo.png",
+              "https://styrasalon.in/salon-1.jpg"
+            ],
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "ITI Layout",

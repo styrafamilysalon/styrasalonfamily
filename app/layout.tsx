@@ -49,6 +49,12 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
+        url: '/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Styra Salon Logo',
+      },
+      {
         url: '/salon-1.jpg',
         width: 1200,
         height: 630,
@@ -75,12 +81,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
       { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/favicon.ico', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [
+      { url: '/favicon.ico', sizes: '180x180', type: 'image/png' },
     ],
   },
   verification: {
-    google: 'your-google-verification-code', // Replace with actual code from Google Search Console
+    google: '<meta name="google-site-verification" content="HCQmnfiMTfmU33z5Ig-Qx2TdvLBlwgqgiGFo6UDjH2g" />', // Replace with actual code from Google Search Console
   },
 };
 

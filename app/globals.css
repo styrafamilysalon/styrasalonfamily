@@ -194,5 +194,47 @@ All colors MUST be HSL.
     -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.5);
     text-stroke: 0.5px rgba(255, 255, 255, 0.5);
   }
+
+  /* Smooth scrolling for select dropdowns on mobile */
+  [data-radix-select-viewport] {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  /* Smooth scrolling for dialog/modal content on mobile */
+  [data-radix-dialog-content] {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent body scroll when modal is open */
+  body:has([data-radix-dialog-content]) {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+
+  /* Enable smooth touch scrolling on mobile */
+  .overflow-y-auto {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    scroll-behavior: smooth;
+  }
+
+  /* Ensure modal content can scroll */
+  [data-radix-dialog-content] {
+    touch-action: none;
+  }
+
+  [data-radix-dialog-content] .overflow-y-auto {
+    touch-action: pan-y;
+    overscroll-behavior: contain;
+  }
+
+  /* iOS specific smooth scrolling */
+  @supports (-webkit-overflow-scrolling: touch) {
+    .overflow-y-auto {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
 }
 

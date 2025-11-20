@@ -86,13 +86,13 @@ const AboutSection = ({ onBookingClick }: AboutSectionProps) => {
 
       {/* Full Details Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="text-3xl font-bold text-primary mb-4">
+        <DialogContent className="max-w-2xl p-0 flex flex-col">
+          <div className="p-6 pb-4 shrink-0 border-b">
+            <DialogTitle className="text-3xl font-bold text-primary pr-8">
               About Styra Family Salon
             </DialogTitle>
-          </DialogHeader>
-          <div className="space-y-6">
+          </div>
+          <div className="space-y-6 overflow-y-auto overflow-x-hidden px-6 py-4" style={{ WebkitOverflowScrolling: 'touch', maxHeight: 'calc(90vh - 180px)', minHeight: '200px' }}>
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Our Story</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -167,7 +167,7 @@ const AboutSection = ({ onBookingClick }: AboutSectionProps) => {
               </ul>
             </div>
           </div>
-          <div className="mt-6 flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0 p-6 pt-4 border-t">
             <Button 
               onClick={() => { setIsModalOpen(false); onBookingClick?.(); }} 
               className="text-white"

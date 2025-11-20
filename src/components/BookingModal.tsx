@@ -225,15 +225,15 @@ const BookingModal = ({ isOpen, onClose, initialGender, initialService }: Bookin
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-3xl font-bold text-primary flex items-center gap-2">
+      <DialogContent className="max-w-2xl p-0 flex flex-col">
+        <div className="p-6 pb-4 shrink-0 border-b">
+          <DialogTitle className="text-3xl font-bold text-primary flex items-center gap-2 pr-8">
             <Sparkles className="w-7 h-7" />
             Book Your Appointment
           </DialogTitle>
-        </DialogHeader>
+        </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6 mt-4">
+        <form onSubmit={handleSubmit} className="space-y-6 overflow-y-auto overflow-x-hidden px-6 py-4" style={{ WebkitOverflowScrolling: 'touch', maxHeight: 'calc(90vh - 100px)', minHeight: '300px' }}>
           {/* Name */}
           <div className="space-y-2">
             <Label htmlFor="name" className="flex items-center gap-2">
@@ -315,9 +315,9 @@ const BookingModal = ({ isOpen, onClose, initialGender, initialService }: Bookin
               <SelectTrigger>
                 <SelectValue placeholder={formData.date ? "Select time slot" : "Select date first"} />
               </SelectTrigger>
-              <SelectContent className="max-h-[200px]">
+              <SelectContent>
                 {availableTimeSlots.map((slot) => (
-                  <SelectItem key={slot} value={slot}>
+                  <SelectItem key={slot} value={slot} className="cursor-pointer">
                     {convertTo12Hour(slot)}
                   </SelectItem>
                 ))}
@@ -337,9 +337,9 @@ const BookingModal = ({ isOpen, onClose, initialGender, initialService }: Bookin
               <SelectTrigger>
                 <SelectValue placeholder={formData.gender ? "Select service" : "Select gender first"} />
               </SelectTrigger>
-              <SelectContent className="max-h-[200px]">
+              <SelectContent className="max-w-[calc(100vw-4rem)]">
                 {getSubServices().map((service, index) => (
-                  <SelectItem key={index} value={service}>
+                  <SelectItem key={index} value={service} className="cursor-pointer">
                     {service}
                   </SelectItem>
                 ))}
