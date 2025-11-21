@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     ],
   },
   verification: {
-    google: '<meta name="google-site-verification" content="HCQmnfiMTfmU33z5Ig-Qx2TdvLBlwgqgiGFo6UDjH2g" />', // Replace with actual code from Google Search Console
+    google: 'HCQmnfiMTfmU33z5Ig-Qx2TdvLBlwgqgiGFo6UDjH2g',
   },
 };
 
